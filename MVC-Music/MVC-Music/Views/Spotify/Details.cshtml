@@ -1,0 +1,130 @@
+﻿@model MVC_Music.Models.Spotify
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Spotify</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Artist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Top_Genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Top_Genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beats_Per_Minute)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beats_Per_Minute)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Energy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Energy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Danceability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Danceability)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loudness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loudness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Liveness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Liveness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Acousticness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acousticness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Speechiness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speechiness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Popularity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Popularity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Index }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

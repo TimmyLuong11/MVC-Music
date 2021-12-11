@@ -1,0 +1,14 @@
+﻿@model MVC_Music.Models.Spotify
+
+@{
+    ViewBag.Title = "Songs";
+}
+
+<h2>Songs</h2>
+
+@foreach (var item in Model.Title)
+{
+
+    @item
+
+}

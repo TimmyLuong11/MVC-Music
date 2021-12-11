@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_128040_practiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Spotify">
+          <Key>
+            <PropertyRef Name="Index" />
+          </Key>
+          <Property Name="Index" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="Artist" Type="nvarchar" MaxLength="255" />
+          <Property Name="Top Genre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Year" Type="float" />
+          <Property Name="Beats Per Minute" Type="float" />
+          <Property Name="Energy" Type="float" />
+          <Property Name="Danceability" Type="float" />
+          <Property Name="Loudness" Type="float" />
+          <Property Name="Liveness" Type="float" />
+          <Property Name="Valence" Type="float" />
+          <Property Name="Duration" Type="float" />
+          <Property Name="Acousticness" Type="float" />
+          <Property Name="Speechiness" Type="float" />
+          <Property Name="Popularity" Type="float" />
+        </EntityType>
+        <EntityContainer Name="DB_128040_practiceModelStoreContainer">
+          <EntitySet Name="Spotify" EntityType="Self.Spotify" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_128040_practiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Spotify">
+          <Key>
+            <PropertyRef Name="Index" />
+          </Key>
+          <Property Name="Index" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Artist" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Top_Genre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="Double" />
+          <Property Name="Beats_Per_Minute" Type="Double" />
+          <Property Name="Energy" Type="Double" />
+          <Property Name="Danceability" Type="Double" />
+          <Property Name="Loudness" Type="Double" />
+          <Property Name="Liveness" Type="Double" />
+          <Property Name="Valence" Type="Double" />
+          <Property Name="Duration" Type="Double" />
+          <Property Name="Acousticness" Type="Double" />
+          <Property Name="Speechiness" Type="Double" />
+          <Property Name="Popularity" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="DB_128040_practiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Spotifies" EntityType="Self.Spotify" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_128040_practiceModelStoreContainer" CdmEntityContainer="DB_128040_practiceEntities">
+          <EntitySetMapping Name="Spotifies">
+            <EntityTypeMapping TypeName="DB_128040_practiceModel.Spotify">
+              <MappingFragment StoreEntitySet="Spotify">
+                <ScalarProperty Name="Index" ColumnName="Index" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Artist" ColumnName="Artist" />
+                <ScalarProperty Name="Top_Genre" ColumnName="Top Genre" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Beats_Per_Minute" ColumnName="Beats Per Minute" />
+                <ScalarProperty Name="Energy" ColumnName="Energy" />
+                <ScalarProperty Name="Danceability" ColumnName="Danceability" />
+                <ScalarProperty Name="Loudness" ColumnName="Loudness" />
+                <ScalarProperty Name="Liveness" ColumnName="Liveness" />
+                <ScalarProperty Name="Valence" ColumnName="Valence" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Acousticness" ColumnName="Acousticness" />
+                <ScalarProperty Name="Speechiness" ColumnName="Speechiness" />
+                <ScalarProperty Name="Popularity" ColumnName="Popularity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
